@@ -41,16 +41,39 @@ const renderProducts = () => {
   const productsContainer = document.getElementById('products-list');
   PRODUCTS.forEach((product) => {
     const productElement = document.createElement('div');
+    const cartButton = document.createElement('button');
+    cartButton.textContent = '장바구니 담기';
+    cartButton.style.width = '100%';
+    cartButton.style.height = '40px';
+    cartButton.style.backgroundColor = '#FFD600';
+    cartButton.style.border = 'none';
+    cartButton.style.color = '#333333';
+    cartButton.style.fontWeight = 'bold';
+    cartButton.style.cursor = 'pointer';
+    cartButton.style.marginTop = '1em';
+    cartButton.addEventListener('click', () => {
+      alert('장바구니에 상품이 담겼습니다.');
+    });
+
+    productElement.appendChild(cartButton);
+    productElement.style.border = '1px solid #eeeeee';
+    productElement.style.padding = '1em';
+    productElement.style.borderRadius = '10px';
+    productElement.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
     productElement.style.width = '200px';
-    productElement.style.textAlign = 'center';
     productElement.style.margin = '1em';
     productElement.innerHTML = `
-      <div style="font-weight: bold; font-size: 16px;">${product.name}</div>
-      <img src="${product.productImg}" alt="${
+    <img src="${product.productImg}" alt="${
       product.name
     }" style="width: 100%; height: auto;" />
-      <p style="font-size: 14px; color: #555;">${product.detail}</p>
-      <div style="font-size: 18px; font-weight: bold; color: #000;">${product.price.toLocaleString()}원</div>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1em;">
+      <button style="width: 100%; height: 40px; color: #333333; border: none; font-weight: bold; cursor: pointer;">
+        담기
+      </button>
+    </div>
+    <div style="color: #333333; font-weight: 400;">${product.name}</div>
+      <p style="font-size: 0.75em; color: #999999;">${product.detail}</p>
+      <div style="font-size: 18px; font-weight: bold; color: #222222;">${product.price.toLocaleString()}원</div>
       `;
     productsContainer.appendChild(productElement);
   });
