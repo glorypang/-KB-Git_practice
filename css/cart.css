@@ -1,0 +1,36 @@
+.cart-container {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+.cart-item-info {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+}
+.cart-item-controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #6200ea;
+  color: white;
+  cursor: pointer;
+}
+.remove-btn {
+  background: red;
+}
