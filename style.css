@@ -1,0 +1,183 @@
+/* 전체 페이지 스타일 */
+body {
+  margin: 0;
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+}
+
+/* 헤더 스타일 */
+header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 90%;
+  margin: auto;
+  left: 50%;
+  max-width: 1600px;
+  transform: translateX(-50%);
+}
+
+/* 왼쪽 로고 */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: purple;
+  margin: 0;
+}
+
+/* 중앙 검색창 */
+.search-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+  border: 1px solid purple;
+  border-radius: 25px;
+  padding: 5px;
+  width: 600px;
+}
+
+#search {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+/* 서브 네비게이션 */
+.sub-nav {
+  background-color: white;
+  padding: 10px 40px;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.sub-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.sub-nav ul li {
+  margin: 0 50px;
+}
+
+.sub-nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.sub-nav ul li a i {
+  margin-right: 5px;
+}
+
+/* 배너 이미지 컨테이너 */
+.banner_img {
+  width: 100%;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+/* 배너 이미지 */
+.banner_img img {
+  width: 100%;
+  height: auto;
+  height: 400px;
+  display: block;
+}
+
+/* 섹션 제목 */
+.deal-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.deal-section h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.deal-section p {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* 상품 리스트 (그리드 레이아웃) */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 상품 이미지 */
+.product-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 장바구니 버튼 */
+.cart-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* 상품명 */
+.product-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* 원래 가격 */
+.original-price {
+  font-size: 0.9rem;
+  color: gray;
+  text-decoration: line-through;
+}
+
+/* 할인 가격 */
+.discount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+}
+
+.discount span {
+  font-size: 1rem;
+  color: red;
+  font-weight: bold;
+}

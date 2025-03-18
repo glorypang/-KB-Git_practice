@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Mall</title>
+    <title>Kurly Style Header</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Main Page</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="pages/cart.html">장바구니 페이지</a>
-          <a href="pages/user_profile.html">사용자 정보 페에지</a>
-          <a href="pages/sale.html">판매 페이지 </a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <!-- 왼쪽 로고 및 브랜드 네비게이션 -->
+      <div class="logo">
+        <h1>Shop</h1>
+      </div>
+
+      <!-- 중앙 검색창 -->
+      <div class="search-container">
+        <form action="">
+          <input type="text" id="search" placeholder="검색어를 입력해주세요" />
+        </form>
+      </div>
+
+      <!-- 오른쪽 아이콘 및 로그인 메뉴 -->
+      <nav class="sub-nav">
+        <ul>
+          <li><a href="pages/sale.html">판매</a></li>
+          <li><a href="pages/cart.html">장바구니</a></li>
+          <li><a href="pages/user_profile.html">사용자 정보</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
   </body>
 </html>
