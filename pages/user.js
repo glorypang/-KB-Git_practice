@@ -10,6 +10,16 @@ const displayUsername = () => {
 };
 
 const editUsernameButton = document.querySelector('.edit-username-button');
-const editUsername = () => {};
+const editUsername = () => {
+  const usernameValue = document.querySelector('#username').value;
+  if (!usernameValue) {
+    alert('이름을 입력하세요!');
+    return;
+  }
+
+  username = usernameValue;
+  displayUsername();
+};
+editUsernameButton.addEventListener('click', editUsername);
 
 displayUsername();
